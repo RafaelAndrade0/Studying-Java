@@ -15,13 +15,17 @@ public class AdsMedia {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String currentLine;
             double somaTotal = 0;
+            int count = 0;
 
             while ((currentLine = br.readLine()) != null) {
                 // convertendo de String para double
                 double idadeDoTexto = Double.parseDouble(currentLine.substring(34, 38));
                 somaTotal += idadeDoTexto;
-                System.out.println(somaTotal);
+                count ++;
             }
+
+            //System.out.println(count);
+            System.out.println("A média é: " + somaTotal/count);
 
         } catch (IOException e) {
             e.printStackTrace();
