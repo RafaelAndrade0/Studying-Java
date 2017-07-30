@@ -24,7 +24,7 @@ public class TestMain {
             while (desejaContinuar) {
                 System.out.print("Nome produto: ");
                 //String nomeProduto = in.next();
-                String nomeProduto = in.nextLine(); // erro nesse nextLine()
+                String nomeProduto = in.nextLine();
 
                 System.out.print("Preço produto: ");
                 int precoProduto = in.nextInt();
@@ -36,7 +36,7 @@ public class TestMain {
 
                 System.out.print("Deseja continuar?(S/N) > ");
                 String resposta = in.next();
-                // necessário porque in.next() só lê o número e não o fim da linha
+                // in.nextline() necessário porque in.next() só lê o número e não o fim da linha
                 in.nextLine();
 
                 if (resposta.equalsIgnoreCase("n")) {
